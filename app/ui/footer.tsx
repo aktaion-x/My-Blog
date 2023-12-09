@@ -9,11 +9,11 @@ export default function Footer() {
       <div className="max-w-screen-2xl mx-auto px-10 py-3 flex flex-col">
         <div className="flex md:justify-between justify-center items-center md:flex-row flex-col mb-3">
           <h3 className="text-2xl font-semibold"><Link href='/'>Aktaion Blog</Link></h3>
-          <ul className="flex gap-5 mt-3 mb-4 text-neutral-400 transition-colors">
-            <li className="hover:text-neutral-200"><Link href='/admin'>Admin</Link></li>
-            <li className="hover:text-neutral-200"><Link href='/about'>About</Link></li>
-            <li className="hover:text-neutral-200"><Link href='/blogs'>Blogs</Link></li>
-            <li className="hover:text-neutral-200"><Link target="_blank" href='http://ghassan-athamin.site/'>Portfolio</Link></li>
+          <ul className="flex gap-5 mt-3 mb-4 text-neutral-400 transition-all duration-700">
+            <li><Link className="hover:text-neutral-200 transition-colors" href='/admin'>Admin</Link></li>
+            <li><Link className="hover:text-neutral-200 transition-colors" href='/about'>About</Link></li>
+            <li><Link className="hover:text-neutral-200 transition-colors" href='/blogs'>Blogs</Link></li>
+            <li><Link className="hover:text-neutral-200 transition-colors" target="_blank" href='http://ghassan-athamin.site/'>Portfolio</Link></li>
           </ul>
         </div>
         <div className="flex gap-3 items-center justify-center flex-col">

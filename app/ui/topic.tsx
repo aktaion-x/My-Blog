@@ -11,7 +11,7 @@ export default function Topic(
   return (
     <Link
       style={{ backgroundColor: topic.color + '33', color: topic.color }}
-      className='px-2 text-sm py-[1px] rounded-xl' href={`/blogs/topics/${topic.url}`}>
+      className='px-[10px] text-sm py-[2px] rounded-xl' href={`/blogs/topics/${topic.url}`}>
       {topic.name}
     </Link>
   );
