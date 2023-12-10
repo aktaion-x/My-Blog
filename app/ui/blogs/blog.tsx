@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Topic from "../topic";
-import { topics } from "@/app/lib/topics";
+import { topics } from "@/dump/topics";
 
 export default function Blog() {
   return (

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Topic from "../ui/topic";
-import { topics } from "../lib/topics";
+import { topics } from "../../dump/topics";
 
 export default function Topics() {
   return (

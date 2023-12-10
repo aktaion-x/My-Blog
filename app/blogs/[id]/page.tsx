@@ -4,12 +4,9 @@ import { BsTwitterX } from "react-icons/bs";
 import { SiFacebook, SiLinkedin } from "react-icons/si";
 import { blog } from "@/dump/blog";
 import Topic from "@/app/ui/topic";
-import { topics } from "@/app/lib/topics";
+import { topics } from "@/dump/topics";
 
 export default function Page() {
-
-
-
   return (
     <div className="max-w-[700px] mx-auto sm:text-lg">
       <h2>{blog.title}</h2>
