@@ -9,11 +9,11 @@ export default function Page() {
     <div>
       <Header />
       <div className='mt-36 flex md:flex-row flex-col h-fit gap-10'>
-        <div className='md:w-3/4 flex flex-col gap-5 mb-10'>
-          <h2 className='pt-5'>New on the blog</h2>
+        <div className='md:w-8/12 flex flex-col gap-5 mb-10'>
+          <h2 className='pt-5'>Latest blogs</h2>
           <LatestBlogs />
         </div>
-        <div className='flex flex-col gap-5 rounded-lg'>
+        <div className='md:w-4/12 flex flex-col gap-5 rounded-lg'>
           <h2 className='pt-5'>New on the blog</h2>
           <Widget />
         </div>

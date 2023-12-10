@@ -10,8 +10,8 @@ export default function Pagination() {
       <div className='flex items-center justify-center gap-5'>
         <Link className={disabled} href='/'><ArrowLeftIcon className='w-4' /></Link>
         <ul className='flex items-center justify-center gap-2'>
-          <Link className={paginationBox} href=''>1</Link>
-          <Link className={active} href=''>2</Link>
+          <Link className={active} href=''>1</Link>
+          <Link className={paginationBox} href=''>2</Link>
           <Link className={paginationBox} href=''>3</Link>
           <Link className={paginationBox} href=''>...</Link>
           <Link className={paginationBox} href=''>10</Link>

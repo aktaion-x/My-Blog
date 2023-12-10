@@ -1,6 +1,7 @@
 import Image from "next/image";
 import NavLinks from "./nav-links";
 import Link from "next/link";
+import Logo from "../logo";
 
 export default function Navbar() {
   return (
@@ -12,13 +13,7 @@ export default function Navbar() {
         main-box rounded-full
       ">
         <Link href='/' className="logo flex gap-2 items-center">
-          <Image
-            src='/favicon.ico'
-            alt="Actaion Logo"
-            width={50}
-            height={50}
-            className="border rounded-full"
-          />
+          <Logo className={"w-[50px] h-[50px] border rounded-full p-1.5 text-white"} />
         </Link>
         <NavLinks />
       </nav>

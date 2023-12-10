@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <div>
       <h2 className="text-4xl mb-3">All Blogs</h2>
-      <p className="sm:text-base text-sm">Read articles about Vue.js, JavaScript, CSS, Test Driven Development, and Front-End Architecture in general. My blog focuses heavily on Web Development, but occasionally I also write articles about personal topics.</p>
+      <p className="sm:text-base text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio beatae voluptate reprehenderit repudiandae aliquam facere earum sit repellendus. Reprehenderit neque aliquid ipsum nam recusandae excepturi quae sapiente, distinctio possimus qui.</p>
       <div className="flex flex-col gap-3  md:w-3/4 mx-auto mt-8 mb-12">
         <Search placeholder="Search Blogs..." />
         <Topics />
