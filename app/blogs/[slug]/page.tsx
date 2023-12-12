@@ -1,18 +1,30 @@
 import { ShareIcon, LinkIcon } from "@heroicons/react/24/outline";
+import fs from 'fs';
+import Markdown from 'markdown-to-jsx'
 import Image from "next/image";
 import { BsTwitterX } from "react-icons/bs";
 import { SiFacebook, SiLinkedin } from "react-icons/si";
-import { blog } from "@/dump/blog";
+// import { blog } from "@/dump/blog";
 import Topic from "@/app/ui/topic";
 import { topics } from "@/dump/topics";
 
-export default function Page() {
+export default function Page(
+  { params, searchParams }
+    :
+    { params: { slug: string }, searchParams: object }
+) {
+  // console.log(params.slug)
+  const blog = getBlog(params.slug)
+  return (
+    <div>
+      <Markdown>{blog}</Markdown>
+    </div>
+  )
   return (
     <div className="max-w-[700px] mx-auto sm:text-lg">
-      <h2>{blog.title}</h2>
-      <p className="mt-4 font-semibold">{blog.subTitle}</p>
+      {/* <h2>{blog.title}</h2>
+      <p className="mt-4 font-semibold">{blog.subtitle}</p>
       <div className="w-full bg-white my-10">
-        {/* <Image src='/hero-mobile.png' alt="Blog Picture" className="w-full h" width={1000} height={100} sizes="100vw" /> */}
         <img src={blog.cover} alt="Blog Picture" className="mx-auto brightness-95" />
         <p className="bg-neutral-900 py-2 text-sm text-center border border-neutral-800">Photo by 傅甬 华 on Unsplash</p>
       </div>
@@ -61,7 +73,13 @@ export default function Page() {
             <button className="flex gap-3 items-center px-3 py-2 hover:bg-neutral-800 transition-colors "><SiLinkedin /> <span>Share on Linkedin</span></button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
+}
+
+function getBlog(slug: string) {
+  const file = `dump/${slug}.md`
+  const content = fs.readFileSync(file, 'utf8')
+  return content;
 }
