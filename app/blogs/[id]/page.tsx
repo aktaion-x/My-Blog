@@ -7,17 +7,19 @@ import { SiFacebook, SiLinkedin } from "react-icons/si";
 // import { blog } from "@/dump/blog";
 import Topic from "@/app/ui/topic";
 import { topics } from "@/dump/topics";
+import { fetchBlogById } from "@/app/lib/data";
 
-export default function Page(
+export default async function Page(
   { params, searchParams }
     :
-    { params: { slug: string }, searchParams: object }
+    { params: { id: string }, searchParams: object }
 ) {
   // console.log(params.slug)
-  const blog = getBlog(params.slug)
+  const blog = await fetchBlogById(params.id)
   return (
     <div>
-      <Markdown>{blog}</Markdown>
+      <Markdown>{blog.content}</Markdown>
+      <div>{blog.tags.map((tag) => (<Topic key={tag.id} topic={tag} />))}</div>
     </div>
   )
   return (

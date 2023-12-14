@@ -1,9 +1,12 @@
+import { fetchBlogs } from "../lib/data";
 import Blog from "../ui/blogs/blog";
 import Pagination from "./pagination";
 import Search from "./search";
 import Topics from "./topics";
 
-export default function Page() {
+export default async function Page() {
+  const blogs = await fetchBlogs();
+  console.log(blogs)
   return (
     <div>
       <h2 className="text-4xl mb-3">All Blogs</h2>
@@ -13,11 +16,9 @@ export default function Page() {
         <Topics />
       </div>
       <ul className="flex flex-col gap-5 md:w-3/4 mx-auto justify-center items-center">
-        <Blog />
-        <Blog />
-        <Blog />
-        <Blog />
-        <Blog />
+        {blogs.map((blog) => (
+          <Blog key={blog.id} blog={blog} />
+        ))}
       </ul>
       <Pagination />
     </div>
