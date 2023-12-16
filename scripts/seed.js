@@ -13,7 +13,6 @@ async function seedBlogs(client) {
     CREATE TABLE IF NOT EXISTS blogs (
     id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
-    cover VARCHAR(255) NOT NULL,
     subtitle VARCHAR(255) NOT NULL,
     tags INTEGER[],
     content TEXT NOT NULL,
@@ -28,8 +27,8 @@ async function seedBlogs(client) {
     const insertedBlogs = await Promise.all(
       blogs.map(
         (blog) => client.sql`
-        INSERT INTO blogs (title, cover, subtitle, tags, content, date)
-        VALUES (${blog.title}, ${blog.cover}, ${blog.subtitle},${blog.tags}, ${blog.content}, ${blog.date})
+        INSERT INTO blogs (title, subtitle, tags, content, date)
+        VALUES (${blog.title}, ${blog.subtitle},${blog.tags}, ${blog.content}, ${blog.date})
         ON CONFLICT (id) DO NOTHING;
       `,
       ),

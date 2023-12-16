@@ -1,7 +1,6 @@
 export type Blog = {
   title: string;
   subtitle: string;
-  cover: string;
   tags: Tag[];
   date: Date;
   content: string

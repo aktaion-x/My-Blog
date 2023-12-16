@@ -11,6 +11,7 @@ export default function Footer() {
           <h3 className="text-2xl font-semibold"><Link href='/'>Aktaion Blog</Link></h3>
           <ul className="flex gap-5 mt-3 mb-4 text-neutral-400 transition-all duration-700">
             <li><Link className="hover:text-neutral-200 transition-colors" href='/admin'>Admin</Link></li>
+            <li><Link className="hover:text-neutral-200 transition-colors" href='/blogs/create'>Create</Link></li>
             <li><Link className="hover:text-neutral-200 transition-colors" href='/about'>About</Link></li>
             <li><Link className="hover:text-neutral-200 transition-colors" href='/blogs'>Blogs</Link></li>
             <li><Link className="hover:text-neutral-200 transition-colors" target="_blank" href='http://ghassan-athamin.site/'>Portfolio</Link></li>

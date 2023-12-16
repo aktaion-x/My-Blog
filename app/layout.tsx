@@ -22,7 +22,7 @@ export default function RootLayout({
         {appStatus === 'development' && (
           <>
             <Navbar />
-            <main className='max-w-screen-xl sm:mt-44 mt-32 mx-auto px-10'>
+            <main className='max-w-screen-xl sm:mt-44 mt-32 mx-auto px-6 sm:px-10'>
               {children}
             </main>
             <Footer />

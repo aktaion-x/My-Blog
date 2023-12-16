@@ -1,3 +1,5 @@
+import './blog.css'
+import { merriweatherSans } from '@/app/ui/fonts'
 import { ShareIcon, LinkIcon } from "@heroicons/react/24/outline";
 import fs from 'fs';
 import Markdown from 'markdown-to-jsx'
@@ -8,18 +10,24 @@ import { SiFacebook, SiLinkedin } from "react-icons/si";
 import Topic from "@/app/ui/topic";
 import { topics } from "@/dump/topics";
 import { fetchBlogById } from "@/app/lib/data";
+import { notFound } from 'next/navigation';
 
 export default async function Page(
-  { params, searchParams }
+  { params }
     :
-    { params: { id: string }, searchParams: object }
+    { params: { id: string } }
 ) {
   // console.log(params.slug)
   const blog = await fetchBlogById(params.id)
+  if (!blog) {
+    notFound();
+  }
   return (
     <div>
-      <Markdown>{blog.content}</Markdown>
-      <div>{blog.tags.map((tag) => (<Topic key={tag.id} topic={tag} />))}</div>
+      <div id="blog" className={`${merriweatherSans.className}`}>
+        <Markdown>{blog.content}</Markdown>
+      </div>
+      {/* <div>{blog.tags.map((tag) => (<Topic key={tag.id} topic={tag} />))}</div> */}
     </div>
   )
   return (

@@ -1,0 +1,138 @@
+#blog * {
+  color: #dddddd;
+  max-width: 700px;
+  margin: 0 auto;
+}
+#blog {
+  font-size: 18px;
+}
+#blog h2 {
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+#blog h3 {
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+#blog h4 {
+  margin-bottom: 7px;
+  font-size: 17px;
+}
+#blog h5 {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+#blog p {
+  margin-bottom: 30px;
+}
+#blog img {
+  width: 100%;
+}
+#blog strong {
+  font-weight: bolder;
+}
+#blog a,
+#blog a * {
+  color: #e91e63;
+  text-decoration: underline;
+}
+#blog em {
+  font-weight: 200;
+}
+#blog mark,
+#blog mark {
+  background: #ffeb3b;
+  color: #000;
+}
+/* header */
+#blog h1 {
+  margin-bottom: 20px;
+  font-size: 42px;
+  text-align: start;
+}
+#blog h6 {
+  margin-bottom: 50px;
+  font-size: 20px;
+  text-align: start;
+}
+#blog img[title="cover"] {
+  width: 100%;
+  margin-bottom: 30px;
+  background: #333;
+  border-radius: .3rem;
+}
+/* Table */
+#blog table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 40px auto 70px;
+}
+#blog th {
+  background: #111;
+}
+#blog th, td {
+  border: 1px solid #333;
+  padding: 8px;
+}
+@media (max-width:676px) {
+  #blog table {
+    font-size: 12px;
+  }
+  #blog th, td {
+    padding: 5px;
+  }
+}
+#blog tr:nth-child(even) {
+  background: #11111155;
+}
+#blog tr:hover {
+  transition: .3s background;
+  background: #222;
+}
+/* code */
+#blog :not(pre) > code {
+  @apply border border-dashed border-transparentGray-200 bg-neutral-800 bg-opacity-40 transition-all px-2 rounded-md;
+  backdrop-filter: blur(10px);
+}
+#blog pre {
+  @apply border border-dashed border-transparentGray-200 bg-neutral-800 bg-opacity-40 transition-all px-5 py-3 rounded-lg overflow-auto mt-5 mb-10;
+  backdrop-filter: blur(10px);
+}
+/* code scrollbar */
+#blog pre::-webkit-scrollbar {
+  width: 1em;
+}
+#blog pre::-webkit-scrollbar-track {
+  background: #000;
+  position: relative;
+}
+#blog pre::-webkit-scrollbar-thumb {
+  border: 5px solid #000;
+  background-color: #aaa;
+  border-radius: 50rem;
+  transition: .3s;
+}
+#blog pre::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+/* ul,ol,li (lists) */
+#blog ul,ol {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 18px;
+}
+#blog ul {
+  list-style: outside;
+}
+#blog ol {
+  list-style: decimal;
+}
+#blog li {
+  margin-bottom: 10px;
+}
+/* mobile responsive */
+@media (max-width:766px) {
+  #blog {
+    text-align: center;
+  }
+}
